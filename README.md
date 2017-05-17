@@ -43,4 +43,4 @@
     </script>
 
  ### notice :
-    #### You can do anything with  Javascript Interface when button in function `showToast()` of class `WebInterFace` in the top of this README
+ #### You can do anything with  Javascript Interface when button in function `showToast()` of class `WebInterFace` in the top of this README
