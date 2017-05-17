@@ -10,6 +10,7 @@ import android.util.Log;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private WebView webView;
@@ -45,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
         webView.getSettings().setJavaScriptEnabled(true);
         webView.addJavascriptInterface(new MyJavaScriptInterface(), "HTMLOUT");
         webView.addJavascriptInterface(new MyJavaScriptInterface(), "HTMLOUT2"); // add new JSInterFace rồi
+        webView.addJavascriptInterface(new WebInterFace(), "toaskAction");
+
         webView.setWebViewClient(new WebViewClient() {
             public void onPageFinished(WebView view, String url) {
                 setMyJavascripts();
@@ -71,5 +74,12 @@ public class MainActivity extends AppCompatActivity {
     private void setMyJavascripts() {
         webView.loadUrl("javascript:window.HTMLOUT.gotPairingCode(document.getElementById('pairing_code').innerHTML);");
         webView.loadUrl("javascript:window.HTMLOUT2.jsQueryName2(document.getElementById('queueLabel').innerHTML);");
+    }
+
+    public class WebInterFace {
+        @JavascriptInterface
+        public void showToast() {
+            Toast.makeText(MainActivity.this, "Toast from js", Toast.LENGTH_SHORT).show();
+        }
     }
 }
