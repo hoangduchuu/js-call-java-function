@@ -87,5 +87,10 @@ public class MainActivity extends AppCompatActivity {
             progressDialog.setTitle("javascript");
             progressDialog.show();
         }
+        
+        @JavascriptInterface
+        public  void kaka(){
+            Toast.makeText(MainActivity.this, "hehe button", Toast.LENGTH_SHORT).show();
+        }
     }
 }

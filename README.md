@@ -43,4 +43,7 @@
     </script>
 
  ### notice :
- #### You can do anything with  Javascript Interface when button in function `showToast()` of class `WebInterFace` in the top of this README
+ #### You can do anything with  Javascript Interface when `button clicked` in function `showToast()` of class `WebInterFace` in the top of this README
+
+
+Demo https://youtu.be/3wHA3dh8k-g
