@@ -1,4 +1,4 @@
-
+ # IN ANDROID JAVA CLASS
 ## #1 create class WebInterFace
 		public class WebInterFace {
             @JavascriptInterface
@@ -29,14 +29,18 @@
     }
 
 
- ## IN THE HTML
+ # IN THE HTML
  ### #1 You have a simple html page with button
 
  	<button onclick="androiToast()">Android Toast</button>
 
- ### #a and in create function androiToast() just call the `toastKey` like this:
+ ### #2 and in create function androiToast() just call the `toastKey` like this:
      <script>
     function androiToast() {
-   			 toaskAction.showToast();
-    }
+            toaskAction.showToast();
+
+            }
     </script>
+
+ ### notice :
+    #### You can do anything with  Javascript Interface when button in function `showToast()` of class `WebInterFace` in the top of this README

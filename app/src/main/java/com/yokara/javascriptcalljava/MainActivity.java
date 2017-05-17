@@ -2,6 +2,7 @@ package com.yokara.javascriptcalljava;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         webView = (WebView) findViewById(R.id.videoview);
+
 
         setupWebView("file:///android_asset/a.html");
 //        setupWebView("http://192.168.1.140/html/a.html");
@@ -79,7 +81,11 @@ public class MainActivity extends AppCompatActivity {
     public class WebInterFace {
         @JavascriptInterface
         public void showToast() {
-            Toast.makeText(MainActivity.this, "Toast from js", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "Toast from js2", Toast.LENGTH_SHORT).show();
+            ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
+            progressDialog.setMessage("hehe");
+            progressDialog.setTitle("javascript");
+            progressDialog.show();
         }
     }
 }
